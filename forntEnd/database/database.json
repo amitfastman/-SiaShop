@@ -1,0 +1,133 @@
+[{
+    "name": "watch"
+    , "price": 100
+    , "image": "/images/a.jpg"
+    , "stock": 10
+    , "sold": 3
+    , "new": true
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Watches"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Vintage"
+    , "id": 10000
+}, {
+    "name": "bracelet1"
+    , "price": 60
+    , "image": "images/b.jpg"
+    , "stock": 6
+    , "sold": 1
+    , "new": false
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Bracelets"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Vintage"
+    , "id": 10001
+}, {
+    "name": "bracelet2"
+    , "price": 70
+    , "image": "images/c.jpg"
+    , "stock": 7
+    , "sold": 2
+    , "new": false
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Bracelets"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Vintage"
+    , "id": 10002
+}, {
+    "name": "ring1"
+    , "price": 50
+    , "image": "/images/d.jpg"
+    , "stock": 5
+    , "sold": 0
+    , "new": true
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Rings"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Engagement"
+    , "id": 10003
+}, {
+    "name": "ring2"
+    , "price": 45
+    , "image": "/images/e.jpg"
+    , "stock": 4
+    , "sold": 0
+    , "new": false
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Rings"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Engagement"
+    , "id": 10004
+}, {
+    "name": "necklace1"
+    , "price": 100
+    , "image": "/images/f.jpg"
+    , "stock": 10
+    , "sold": 5
+    , "new": true
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Necklaces"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Vintage"
+    , "id": 10005
+}, {
+    "name": "necklace2"
+    , "price": 60
+    , "image": "/images/i.jpg"
+    , "stock": 6
+    , "sold": 0
+    , "new": true
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Necklaces"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Vintage"
+    , "id": 10006
+}, {
+    "name": "ring3"
+    , "price": 40
+    , "image": "/images/h.jpg"
+    , "stock": 4
+    , "sold": 0
+    , "new": false
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Rings"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Engagement"
+    , "id": 10007
+}, {
+    "name": "ring4"
+    , "price": 20
+    , "image": "/images/g.jpg"
+    , "stock": 100
+    , "sold": 40
+    , "new": true
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Rings"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Engagement"
+    , "id": 10008
+}, {
+    "name": "ring5"
+    , "price": 100
+    , "image": "/images/j.jpg"
+    , "stock": 10
+    , "sold": 7
+    , "new": false
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": ""
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Engagement"
+    , "id": 10009
+}, {
+    "name": "bracelet3"
+    , "price": 90
+    , "image": "/images/s.jpg"
+    , "stock": 9
+    , "sold": 4
+    , "new": true
+    , "description": "Pellentesque sed gravida elit. Nullam odio tortor, egestas quis justo at, maximus"
+    , "catagory1": "Bracelets"
+    , "catagory2": "Fashion Jewelry"
+    , "catagory3": "Men"
+    , "id": 10010
+}]

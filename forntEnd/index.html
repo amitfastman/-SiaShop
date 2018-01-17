@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sia Jewlery</title>
+
+    <!-- Bootstrap styles -->
+    <link href="styles/css/bootstrap.css" rel="stylesheet"/>
+    
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->-->
+<!--     <script src="styles/jquery/jquery-3.2.1.min.js"></script>-->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+
+    
+    
+    <!-- Customize styles -->
+    <link href="styles/style.css" rel="stylesheet"/>
+    <!-- font awesome styles -->
+	<link href="styles/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!--[if IE 7]>
+			<link href="css/font-awesome-ie7.min.css" rel="stylesheet">
+		<![endif]-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <!-- angular files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+        <script src="js/jquery.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+    
+	    <script src="js/jquery.easing-1.3.min.js"></script>
+        <script src="js/jquery.scrollTo-1.4.3.1-min.js"></script>
+        <script src="js/shop.js"></script>
+        <script src="app/app.js"></script>
+	    <!-- Favicons -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+<body ng-controller='MainController'>
+
+<!-- 
+##############################################	Upper Header Section  #################################################
+-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="topNav">
+		<div class="container">
+			<div class="alignR">
+				<div class="pull-left socialNw">
+					<a href="#"><span class="icon-twitter"></span></a>
+					<a href="#"><span class="icon-facebook"></span></a>
+					<a href="#"><span class="icon-youtube"></span></a>
+					<a href="#"><span class="icon-tumblr"></span></a>
+				</div>
+				<a class="active" href="#!/"> <span class="icon-home"></span> Home</a> 
+				<a href="#"><span class="icon-user"></span> My Account</a> 
+				<a href="#!register"><span class="icon-edit"></span> Free Register </a> 
+				<a href="#!contact"><span class="icon-envelope"></span> Contact us</a>
+				<a href="#!cart"><span class="icon-shopping-cart"></span> 0 Item(s) - <span class="badge badge-warning"> $0</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
+=============================================    C O N T A I N E R     ================================================
+-->
+<div class="container">
+<div id="gototop"> </div>
+ <!--
+##############################################    Lower Header Section     #############################################
+-->   
+<header id="header">
+<div class="row">
+	<div class="span4">
+	<h1>
+	<a class="logo" href="#"><img src="images/my-shop-logo.png" alt="bootstrap sexy shop">
+	</a>
+	</h1>
+	</div>
+	<div class="span4">
+	<h2></h2>
+	</div>
+	<div class="span4 alignR">
+	<p><br> <strong> Support (24/7) :  0800 1234 678 </strong><br><br></p>
+	<span class="btn btn-warning btn-mini" class="active">$</span>
+	<span class="btn btn-mini">&pound;</span>
+	<span class="btn btn-mini">&euro;</span>
+	</div>
+</div>
+</header>
+
+<!--
+##########################################       Navigation Bar Section        ######################################
+-->
+<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <div class="nav-collapse">
+			<ul class="nav">
+			  <li class="active"><a href="index.html">Home	</a></li>
+			  <li class=""><a href="#!products/Under 50$/1">Under $50 ></a></li>
+			  <li class=""><a href="#!products/Between 50$ and 250$/2">$50 - 250$ ></a></li>
+              <li class=""><a href="#!products/Above 250$/3">$250 + ></a></li>
+			  <li class=""><a href="#!onsale">ON SALE ></a></li>
+			  <li class=""><a href="#!contact">Contact Us ></a></li>
+			</ul>
+			<form action="#" class="navbar-search pull-left">
+			  <input type="text" placeholder="Search" class="search-query span2">
+			</form>
+			<ul class="nav pull-right">
+			<li class="dropdown">
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
+				<div class="dropdown-menu">
+				<form class="form-horizontal loginFrm">
+				  <div class="control-group">
+					<input type="text" class="span2" id="inputEmail" placeholder="Email">
+				  </div>
+				  <div class="control-group">
+					<input type="password" class="span2" id="inputPassword" placeholder="Password">
+				  </div>
+				  <div class="control-group">
+					<label class="checkbox">
+					<input type="checkbox"> Remember me
+					</label>
+					<button type="submit" class="shopBtn btn-block">Sign in</button>
+				  </div>
+				</form>
+				</div>
+			</li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+<!-- 
+##################################################      Body Section        #################################################
+-->
+	<div class="row">
+        
+ <!-- 
+ ~~~~~~~~     ~~~~~~~~~       ~~~~~~~~~    SPAN A  - LEFT side    ~~~~~~~~~~       ~~~~~~~~~ 
+-->        
+<div id="sidebar" class="span3">
+<!-- 
+  ----------- Navigation list  -----------  
+-->    
+    
+<div class="well well-small">
+	<ul class="nav nav-list">
+		<li><a href="#!products/Necklaces/4"><span class="icon-chevron-right"></span>Necklaces</a></li>
+		<li><a href="#!products/Watches/5"><span class="icon-chevron-right"></span>Watches</a></li>
+        <li><a href="#!products/Bracelets/6"><span class="icon-chevron-right"></span>Bracelets</a></li>
+        <li><a href="#!products/Rings/7"><span class="icon-chevron-right"></span>Rings</a></li>
+		<li><a href="#!products/Fashion Jewelry/8"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
+		<li><a href="#!products/Engagement & Wedding/9"><span class="icon-chevron-right"></span>Engagement & Wedding</a></li>
+		<li><a href="#!products/Men's Jewelry/10"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
+		<li><a href="#!products/Vintage & Antique/11"><span class="icon-chevron-right"></span>Vintage & Antique</a></li>
+		<li><a href="#!SHboard/Second Hand Board"><span class="icon-chevron-right"></span>Second hand board</a></li>
+		<li><a href="#!products/All Jewelry & Watches/12"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
+		<li style="border:0"> &nbsp;</li>
+		<li> <a class="totalInCart" href="#!cart"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$0</span></strong></a></li>
+	</ul>
+</div>
+<!-- 
+  ----------- Alert box  -----------  
+-->  
+			  <div class="well well-small alert alert-warning cntr">
+				  <h2>50% Discount</h2>
+				  <p> 
+					 Deals you don't want to miss <br><br><a class="defaultBtn" href="#">Click here </a>
+				  </p>
+			  </div>
+			  <div class="well well-small" ><a href="#"><img src="images/paypal.jpg" alt="payment method paypal"></a></div>
+			
+			<a class="shopBtn btn-block" href="#">Just Arraived<br><small>CLICK HERE to see more </small></a>
+			<br>
+			<br>
+<!-- 
+  ----------- Side box  -----------  
+-->    
+ 		<ul class="nav nav-list promowrapper" >
+             <li ng-repeat="item in products | orderBy : random | limitTo : 2 ">
+			   <div class="thumbnail">
+				 <a class="zoomTool" href="#!product_details" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+                 <a href="#!product_details"><img ng-src="{{item.image}}" alt="just arraived box "></a>
+				 <div class="caption">
+				   <h4><a class="defaultBtn" href="#!product_details">VIEW</a> <span class="pull-right">{{item.price | currency : "USD"}}</span></h4>
+				 </div>
+			   </div>
+               <div style="border:0">&nbsp;</div>  
+			</li>
+            
+        </ul>
+<!-- 
+  ----------- END of Side box  -----------  
+--> 
+	</div>
+ <!-- 
+ ~~~~~~~~     ~~~~~~~~~       ~~~~~~~~~    SPAN B  - RIGHT side    ~~~~~~~~~~        ~~~~~~~~ 
+-->
+	<div ng-view></div>
+ <!-- 
+ ~~~~~~     ~~~~~~~       ~~~~~~~      END of SPAN B - RIGHT side      ~~~~~~~~~~      ~~~~~~~~ 
+-->        
+    </div>
+<!-- 
+##################################################      Clients Section        #################################################
+-->
+    
+
+<section class="our_client">
+	<hr class="soften"/>
+	<h4 class="title cntr"><span class="text">Manufactures</span></h4>
+	<hr class="soften"/>
+	<div class="row">
+		<div class="span2">
+			<a href="#"><img alt="" ng-src="images/1.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" ng-src="images/2.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" ng-src="images/3.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" ng-src="images/4.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" ng-src="images/5.png"></a>
+		</div>
+		<div class="span2">
+			<a href="#"><img alt="" ng-src="images/6.png"></a>
+		</div>
+	</div>
+</section>
+<!-- 
+##################################################      Footer Section        #################################################
+-->
+
+<footer class="footer">
+<div class="row-fluid">
+<div class="span2">
+<h5>Your Account</h5>
+<a href="#">YOUR ACCOUNT</a><br>
+<a href="#">PERSONAL INFORMATION</a><br>
+<a href="#">ADDRESSES</a><br>
+<a href="#">DISCOUNT</a><br>
+<a href="#">ORDER HISTORY</a><br>
+ </div>
+<div class="span2">
+<h5>Information</h5>
+<a href="contact.html">CONTACT</a><br>
+<a href="#">SITEMAP</a><br>
+<a href="#">LEGAL NOTICE</a><br>
+<a href="#">TERMS AND CONDITIONS</a><br>
+<a href="#">ABOUT US</a><br>
+ </div>
+<div class="span2">
+<h5>Our Offer</h5>
+<a href="#">NEW PRODUCTS</a> <br>
+<a href="#">TOP SELLERS</a><br>
+<a href="#">SPECIALS</a><br>
+<a href="#">MANUFACTURERS</a><br>
+<a href="#">SUPPLIERS</a> <br/>
+ </div>
+ <div class="span6">
+<h5>The standard chunk of Lorem</h5>
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
+ those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et 
+ Malorum" by Cicero are also reproduced in their exact original form, 
+accompanied by English versions from the 1914 translation by H. Rackham.
+ </div>
+ </div>
+</footer>
+<!-- 
+##################################################    end of  Footer Section        #################################################
+-->
+</div>
+<!--
+=============================================    E N D    of    C O N T A I N E R     ================================================
+-->
+    
+<!-- 
+##################################################     Copyright Section        #################################################
+-->    
+<div class="copyright">
+<div class="container">
+	<p class="pull-right">
+		<a href="#"><img src="images/maestro.png" alt="payment"></a>
+		<a href="#"><img src="images/mc.png" alt="payment"></a>
+		<a href="#"><img src="images/pp.png" alt="payment"></a>
+		<a href="#"><img src="images/visa.png" alt="payment"></a>
+		<a href="#"><img src="images/disc.png" alt="payment"></a>
+	</p>
+	<span>Copyright &copy; 2017<br> Amit fastman inc.</span>
+</div>
+</div>
+    
+<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>
+    
+
+    
+   
+    
+    
+</body>
+
+</html>

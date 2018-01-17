@@ -1,0 +1,93 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<div class="span9">
+
+
+	<div class="well well-small">
+	   <h2>{{pageCatg}}</h2>
+       <table class="nav">
+           <tr>
+               <td class=""><h4>SORT BY :&nbsp</h4></td>
+                <td>  
+                  <select name="sort" class ="sort-by-section">
+                        <option value="rele" selected=“selected” >RELEVANCE</option>
+                        <option value="prclh" >PRICE: LOW TO HIGH</option>
+                        <option value="prchl" >PRICE: HIGH TO LOW</option>
+                        <option value="rate" >RATING</option>
+                        <option value="best" >BEST SELLING</option>
+                  </select>
+              </td>
+              <td class="">&nbsp &nbsp &nbsp &nbsp</td>
+              <td class="">
+                  <h4>VIEW AS :&nbsp</h4></td>
+                <td><select name="view" class="sort-by-section">
+                        <option value="grid-view" selected=“selected” >12</option>
+                        <option value="icon-view" >24</option>
+                        <option value="list-view" >LIST</option>
+                  </select>
+                 </td>
+          </tr>  
+        </table> 
+        
+<!--
+------------  ROW engine  -------------
+-->
+    
+
+<div class="">
+    <ul class="">
+        <li ng-repeat="line in views | limitTo : 3">
+        
+<!--
+------------  column engine  -------------
+-->       
+<!--        /:ID/:name/:image/:stock/:description-->
+            
+       <div class="row-fluid">
+		  <ul class="thumbnails">
+              
+			<li class="span4" ng-repeat="item in products | orderBy : random | limitTo : 3">
+			  <div class="thumbnail">
+				 
+				<a class="zoomTool" href="#!product_details/{{item/id}}/{{item.name}}/{{item.stock}}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+				<a ng-href= "#!product_details/{{item.id}}/{{item.name}}/{{item.stock}}"><img ng-src="{{item.image}}" alt=""></a>
+				<div class="caption cntr">
+					<p>{{item.name}}</p>
+                  	<p><strong>{{item.price | currency : "USD"}}</strong></p>
+					<h4><a class="shopBtn" href="#" title="add to cart"> Add to cart </a></h4>
+					<div class="actionList">
+						<a class="pull-left" href="#">Add to Wish List </a> 
+						<a class="pull-left" href="#"> Add to Compare </a>
+					</div> 
+					<br class="clr">
+				</div>
+			  </div>
+			</li>
+              
+              
+		  </ul>
+		</div>
+    </li>
+<!--
+------------ end of column engine  -------------
+-->         
+</ul>
+</div>
+        
+<!--
+------------  page from page  -------------
+-->  
+        
+          
+        
+<!--
+------------  END of page from page  -------------
+-->         
+        
+    </div>
+</div>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  END of   S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	

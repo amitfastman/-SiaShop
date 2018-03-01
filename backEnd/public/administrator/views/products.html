@@ -1,0 +1,62 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<div class="span9" >
+
+  
+	<div class="well well-small" >
+     <h2>{{pageCatg}}</h2>
+     <h6>Category Number: {{pageType}}</h6> 
+     <h3>We found {{size}} items in this category</h3>
+     <h5 style="color:red">{{message}}</h5>
+         
+
+
+        <table class="nav">
+           <tr>
+               <td class=""><h4>SORT BY :&nbsp</h4></td>
+                <td>  
+                  <select name="sort" class ="sort-by-section">
+                        <option value="rele" selected=“selected” >RELEVANCE</option>
+                        <option value="prclh" >PRICE: LOW TO HIGH</option>
+                        <option value="prchl" >PRICE: HIGH TO LOW</option>
+                        <option value="best" >BEST SELLING</option>
+                  </select>
+              </td>
+              <td class="">&nbsp &nbsp &nbsp &nbsp</td>
+              <td class="">
+                  <h4>VIEW AS :&nbsp</h4></td>
+                <td><select name="view" class="sort-by-section">
+                        <option value="grid-view" selected=“selected” ng-click="changeClass()">LARGE icons</option>   <!-- not working -->
+                        <option value="icon-view" ng-click="changeClass()">SMALL icons</option>
+                        <option value="list-view" >LIST</option>
+                  </select>
+                 </td>
+          </tr>  
+        </table> 
+
+       
+          
+      
+
+          <div ng-class="classType" ng-repeat="item in products | orderBy : random" >
+            <div class="thumbnail">
+              
+              <a class="zoomTool" href="#!product_details/{{item['_id']}}" title="edit item"><span class="icon-search"></span> edit item</a>
+              <a ng-href= "#!product_details/{{item['_id']}}" ><img ng-src="{{item.image}}" alt=""></a>
+              <div class="caption cntr">
+                <p>{{item.name}}</p>
+                          <p><strong>{{item.price | currency : "USD"}}</strong></p>
+                <h4><a class="shopBtn" href="#!product_details/{{item['_id']}}" title="Edit Item" > Edit Item </a></h4>
+                
+                <br class="clr">
+              </div>
+              </div>
+          </div> 
+      
+    </div>
+</div>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  END of   S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	

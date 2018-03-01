@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<!--## ADMINISTRATOR MANAGMENT WEBSITE ## -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Sia Jewlery</title>
+
+    <!-- Bootstrap styles -->
+    <link href="administrator/styles/css/bootstrap.css" rel="stylesheet"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    
+    <!-- Customize styles -->
+    <link href="administrator/styles/style.css" rel="stylesheet"/>
+    <!-- font awesome styles -->
+	<link href="administrator/styles/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <!--[if IE 7]>
+			<link href="css/font-awesome-ie7.min.css" rel="stylesheet">
+		<![endif]-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        <!-- angular files -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+        <script src="administrator/js/jquery-3.2.1.min.js"></script>
+	    <script src="administrator/js/bootstrap.min.js"></script>
+		<script src="administrator/js/jquery.easing-1.3.min.js"></script>
+        <script src="administrator/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+		<script src="administrator/js/shop.js"></script>
+	    <script src="administrator/app/app.js"></script>
+	    <!-- Favicons -->
+        <link rel="shortcut icon" href="administrator/images/favicon.ico">
+  </head>
+
+<body ng-controller='MainController'>
+
+<!-- 
+##############################################	Upper Header Section  #################################################
+-->
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="topNav">
+		<div class="container">
+			<div class="alignR">
+				<div class="pull-left socialNw">
+					<a href="#"><span class="icon-twitter"></span></a>
+					<a href="#"><span class="icon-facebook"></span></a>
+					<a href="#"><span class="icon-youtube"></span></a>
+					<a href="#"><span class="icon-tumblr"></span></a>
+				</div>
+				<a class="active" href="#!/"> <span class="icon-home"></span> Home</a> 
+				<a href="#"><span class="icon-user"></span> My Account</a> 
+				<a href="#!register"><span class="icon-edit"></span> Free Register </a> 
+				<a href="#!contact"><span class="icon-envelope"></span> Contact us</a>
+				<a href="#!cart"><span class="icon-shopping-cart"></span> 0 Item(s) - <span class="badge badge-warning"> $0</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
+=============================================    C O N T A I N E R     ================================================
+-->
+<div class="container" >
+<div id="gototop"> </div>
+ <!--
+##############################################    Lower Header Section     #############################################
+-->   
+<header id="header">
+<div class="row">
+	<div class="span4">
+	<h1>
+	<a class="logo" href="#"><img src="administrator/images/my-shop-logo.png" alt="bootstrap sexy shop">
+	</a>
+	</h1>
+	</div>
+	<div class="span4">
+	<h2></h2>
+	</div>
+</div>
+<div class="row"><h2 style="color:rgb(46, 248, 6)">Welcome to Sia shop Administrator page</h2></div>
+</header>
+<!--
+##########################################   ADMIN -     Editing Bar Section        ######################################
+-->
+<div class="navbar" style="background:rgb(155, 57, 109)">
+	<div class="navbar-inner" style="background:rgb(155, 57, 109)">
+	<div class="container" style="background:rgb(155, 57, 109)">
+		<a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</a>
+		<div class="nav-collapse">
+		<ul class="nav">
+			<li class=""><a href="#!/new">Add New Item</a></li>
+			<li class=""><a href="#!">Add New Category</a></li>
+			<li class=""><a href="#!">Edit Category</a></li>
+			<li class=""><a href="#!">Delete Category</a></li>
+			<li class=""><a href="#!products/All Jewelry & Watches/13">View all Items</a></li>
+		</ul>
+		</div>
+	</div>
+	</div>
+</div>
+
+
+<!--
+##########################################       Navigation Bar Section        ######################################
+-->
+<div class="navbar">
+	  <div class="navbar-inner">
+		<div class="container">
+		  <a data-target=".nav-collapse" data-toggle="collapse" class="btn btn-navbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </a>
+		  <div class="nav-collapse">
+			<ul class="nav">
+			  <li class="active"><a href="#!">Home	</a></li>     <!-- updtae index.ejs not .html -->
+			  <li class=""><a href="#!products/Under 50$/1">Under $50 ></a></li>
+			  <li class=""><a href="#!products/Between 50$ and 250$/2">$50 - 250$ ></a></li>
+              <li class=""><a href="#!products/Above 250$/3">$250 + ></a></li>
+			  <li class=""><a href="#!onsale">ON SALE ></a></li>
+			  <li class=""><a href="#!contact">Contact Us ></a></li>
+			</ul>
+			<form action="#" class="navbar-search pull-left">
+			  <input type="text" placeholder="Search" class="search-query span2">
+			</form>
+			<ul class="nav pull-right">
+			<li class="dropdown">
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="icon-lock"></span> Login <b class="caret"></b></a>
+				<div class="dropdown-menu">
+				<form class="form-horizontal loginFrm">
+				  <div class="control-group">
+					<input type="text" class="span2" id="inputEmail" placeholder="Email">
+				  </div>
+				  <div class="control-group">
+					<input type="password" class="span2" id="inputPassword" placeholder="Password">
+				  </div>
+				  <div class="control-group">
+					<label class="checkbox">
+					<input type="checkbox"> Remember me
+					</label>
+					<button type="submit" class="shopBtn btn-block">Sign in</button>
+				  </div>
+				</form>
+				</div>
+			</li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+<!-- 
+##################################################      Body Section        #################################################
+-->
+	<div class="row">
+        
+ <!-- 
+ ~~~~~~~~     ~~~~~~~~~       ~~~~~~~~~    SPAN A  - LEFT side    ~~~~~~~~~~       ~~~~~~~~~ 
+-->        
+<div id="sidebar" class="span3">
+<!-- 
+  ----------- Navigation list  -----------  
+-->    
+    
+<div class="well well-small">
+	<ul class="nav nav-list">
+		<li><a href="#!products/Necklaces/4"><span class="icon-chevron-right"></span>Necklaces</a></li>
+		<li><a href="#!products/Watches/5"><span class="icon-chevron-right"></span>Watches</a></li>
+        <li><a href="#!products/Bracelets/6"><span class="icon-chevron-right"></span>Bracelets</a></li>
+        <li><a href="#!products/Rings/7"><span class="icon-chevron-right"></span>Rings</a></li>
+		<li><a href="#!products/Fashion Jewelry/8"><span class="icon-chevron-right"></span>Fashion Jewelry</a></li>
+		<li><a href="#!products/Engagement & Wedding/9"><span class="icon-chevron-right"></span>Engagement & Wedding</a></li>
+		<li><a href="#!products/Men's Jewelry/10"><span class="icon-chevron-right"></span>Men's Jewelry</a></li>
+		<li><a href="#!products/Vintage & Antique/11"><span class="icon-chevron-right"></span>Vintage & Antique</a></li>
+		<li><a href="#!SHboard/Second Hand Board"><span class="icon-chevron-right"></span>Second hand board</a></li>
+		<li><a href="#!products/All Jewelry & Watches/13"><span class="icon-chevron-right"></span>See All Jewelry & Watches</a></li>
+		<li style="border:0"> &nbsp;</li>
+		<li> <a class="totalInCart" href="#!cart"><strong>Total Amount  <span class="badge badge-warning pull-right" style="line-height:18px;">$0</span></strong></a></li>
+	</ul>
+</div>
+<!-- 
+  ----------- Alert box  -----------  
+-->  
+			  <div class="well well-small alert alert-warning cntr">
+				  <h2>50% Discount</h2>
+				  <p> 
+					 Deals you don't want to miss <br><br><a class="defaultBtn" href="#">Click here </a>
+				  </p>
+			  </div>
+			  <div class="well well-small" ><a href="#"><img src="administrator/images/paypal.jpg" alt="payment method paypal"></a></div>
+			
+			<a class="shopBtn btn-block" href="#">Just Arraived<br><small>CLICK HERE to see more </small></a>
+			<br>
+			<br>
+<!-- 
+  ----------- Side box  -----------  
+-->    
+ 		<ul class="nav nav-list promowrapper" >
+             <li ng-repeat="item in products | orderBy : random | limitTo : 2 ">
+			   <div class="thumbnail">
+				 <a class="zoomTool" href="#!product_details/{{item/id}}/{{item.name}}/{{item.stock}}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+                 <a href="#!product_details/{{item/id}}/{{item.name}}/{{item.stock}}"><img ng-src="{{item.image}}" alt="just arraived box "></a>
+				 <div class="caption">
+				   <h4><a class="defaultBtn" href="#!product_details/{{item/id}}/{{item.name}}/{{item.stock}}">VIEW</a> <span class="pull-right">{{item.price | currency : "USD"}}</span></h4>
+				 </div>
+			   </div>
+               <div style="border:0">&nbsp;</div>  
+			</li>
+            
+        </ul>
+<!-- 
+  ----------- END of Side box  -----------  
+--> 
+	</div>
+ <!-- 
+ ~~~~~~~~     ~~~~~~~~~       ~~~~~~~~~    SPAN B  - RIGHT side    ~~~~~~~~~~        ~~~~~~~~ 
+-->
+	<div ng-view></div>
+ <!-- 
+ ~~~~~~     ~~~~~~~       ~~~~~~~      END of SPAN B - RIGHT side      ~~~~~~~~~~      ~~~~~~~~ 
+-->        
+    </div>
+</div>
+<!--
+=============================================    E N D    of    C O N T A I N E R     ================================================
+-->
+    
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+	<div class="span9" >
+			
+<!--
+// --------------------------------------- Quick Return Path  ---------------------------------- //
+-->        
+        
+    <ul class="breadcrumb">
+    <li><a href="#!">Home</a> <span class="divider">/</span></li>
+    <li><a href="#!products">Items</a> <span class="divider">/</span></li>
+    <li class="active">Item info</li>
+    </ul>
+<!--
+// ------------------------------------- END of Quick Return Path  ---------------------------------- //
+-->         
+        
+	<div class="well well-small">
+
+<!-------------------------------------------------the body ------------------------------------ -->		
+	<div class="row-fluid">
+ <!--
+// ---------- item picture ----------- //
+-->       
+			<div class="span5">
+			<div id="myCarousel" class="carousel slide cntr">
+                <div class="carousel-inner">
+                  <div class="item active">
+                   <a href="#"> <img ng-src="{{ITEM.image}}" alt="" style="width:100%"></a>
+                  </div>
+                </div>
+            </div>
+			</div>              
+<!--
+// ---------- item details ----------- //
+-->       
+			<div class="span7">
+<h3 style="color:darkred"> The old data</h3><br>
+<hr class="soft"/>
+
+				<h3>Item ID       : {{ITEM['_id']}}</h3>
+				<h3>Catalog Number: {{ITEM.id}}</h3>
+				<h3>Item Name     : {{ITEM.name}}</h3>
+				<h3>Item Price    : {{ITEM.price}}</h3>
+				<h3>Stock         : {{ITEM.stock}}</h3>
+				<h3>Description   : {{ITEM.description}}</h3>
+				<h3>Catagory1     : {{ITEM.catagory1}}</h3>
+				<h3>Catagory2     : {{ITEM.catagory2}}</h3>
+				<h3>Catagory3     : {{ITEM.catagory3}}</h3>
+				<h3>Image Path    : {{ITEM.image}}</h3>
+
+				<hr class="soft"/>
+				
+			</div> 
+		
+		<div class="span6">
+			    <h4 style="color:rgb(7, 7, 8)">Editing Item with NEW Details</h4>
+
+						  <fieldset> 
+
+							    <div class="control-group">
+								  <label><h5>Item Catalog number:</h5></label>
+								  <input type="text" name="id" value="{{ITEM.id}}" data-ng-model="ITEM.id" class="input-xlarge" />
+							    </div>
+							  
+							    <div class="control-group">
+							   
+								  <label><h5>Item Name:</h5></label>
+								  <input type="text" name="name" value="{{ITEM.name}}" data-ng-model="ITEM.name" class="input-xlarge" />
+							    </div>
+
+							    <div class="control-group">
+									<label><h5>Item price:</h5></label>
+									<input type="text" name="price" class="input-xlarge" value="{{ITEM.price}}" data-ng-model="ITEM.price" />
+								</div>
+					
+							    <div class="control-group">
+									<label><h5>Item Stock in store:</h5></label>
+									<input type="text" name="stock" class="input-xlarge" value="{{ITEM.stock}}" data-ng-model="ITEM.stock"/>
+							    </div>
+
+							    <div class="control-group">
+									<label><h5>Item description:</h5></label>
+									<input type="text" name="description" class="input-xlarge" value="{{ITEM.description}}" data-ng-model="ITEM.description"/>
+							    </div>
+
+							    <div class="control-group">
+								  <label><h5>1st classification:</h5></label>
+								  <input type="text"  name="cat1" class="input-xlarge" value="{{ITEM.catagory1}}" data-ng-model="ITEM.catagory1"/>
+							  
+							    </div>
+							  
+							    <div class="control-group">
+									<label><h5>2nd classification:</h5></label>
+									<input type="text"  name="cat2" class="input-xlarge" value="{{ITEM.catagory2}}" data-ng-model="ITEM.catagory2"/>
+								
+								</div>
+
+								<div class="control-group">
+										<label><h5>3th classification:</h5></label>
+										<input type="text"  name="cat3" class="input-xlarge" value="{{ITEM.catagory3}}" data-ng-model="ITEM.catagory3"/>
+								</div>
+
+								<div class="control-group">
+											<label><h5>Item image (e.g 'images/pic.jpg'):</h5></label>
+										<input type="text"  name="image" class="input-xlarge" value="{{ITEM.image}}" data-ng-model="ITEM.image"/>
+								</div>
+
+							<button class="shopBtn" type="submit" data-ng-click="updateform(ITEM)">Update</button>
+							  
+		   </fieldset> 
+
+		</div>
+				
+		
+		<hr class="softn clr"/>
+		<div class="span6">
+		<h4 style="color:rgb(7, 7, 8)">Delete Item ?</h4>
+		<button class="shopBtn" ng-click="deleteItem(ITEM)">Delete</button>		
+		</div>
+		<hr class="softn clr"/>
+		<div class="span6">
+		 <br>
+		<a class="shopBtn" href="#!products/All Jewelry & Watches/13">Go back without Saving </a>
+	   </div>
+<!-- close 	<div class="row-fluid"> -->
+	   </div>
+
+</div>
+</div>
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  END of   S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->

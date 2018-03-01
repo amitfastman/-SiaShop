@@ -1,0 +1,2 @@
+dbpath=C:\git\sia-shop\backEnd\SiaDBmongo\data\db
+

@@ -1,0 +1,152 @@
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+
+
+
+<div class="span9">
+<!--
+######################################     Carousel box   ######################################   NOT WORKING
+-->
+<div class="well np" >   
+     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<!--     Indicators -->
+    <ol class="carousel-indicators" >
+      <li data-target="#myCarousel" data-slide-to="0" class="active" ></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>  
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img ng-src="/images/carousel1.png" alt="" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img ng-src="/images/carousel2.png" alt="" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img ng-src="/images/carousel3.png" alt="" style="width:100%;">
+      </div>
+        <div class="item">
+        <img ng-src="/images/carousel4.png" alt="" style="width:100%;">
+      </div>
+        
+        <div class="item">
+        <img ng-src="/images/carousel5.png" alt="" style="width:100%;">
+      </div>
+        
+    </div>  
+  </div>
+</div>   
+    
+<!--
+######################################     New Products box   ###################################### 
+-->
+ 	<div class="well well-small">
+	<h3>New In Store </h3>
+	<hr class="soften"/>
+<!--
+// --------------------------------------- small thumbnails  ---------------------------------- //
+-->       
+    <div class="row-fluid">
+	<div id="newProductCar" class="carousel slide">
+        <div class="carousel-inner">
+			<div class="item active">
+			  <ul class="thumbnails">
+ 				<li class="span3" ng-repeat="item in products | orderBy : random | limitTo : 4 ">
+				<div class="thumbnail">
+					 <a class="zoomTool" href="#!product_details/{{item['_id']}}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+					 <a href="#" class="tag"></a>
+                   	 <a href="#!product_details/{{item['_id']}}"><img ng-src="{{item.image}}"></a>
+				</div> 
+				</li>
+			  </ul>
+			</div>
+                
+            <div class="item">
+			  <ul class="thumbnails">
+ 				<li class="span3" ng-repeat="item in products | orderBy : random | limitTo : 4">
+				<div class="thumbnail">
+					 <a class="zoomTool" href="#!product_details/{{item['_id']}}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+					 <a href="#" class="tag"></a>
+                   	 <a href="#!product_details/{{item['_id']}}"><img ng-src="{{item.image}}"></a>
+				</div>
+				</li>
+			  </ul>
+			</div>    
+         </div>
+		    <a class="left carousel-control" href="#newProductCar" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#newProductCar" data-slide="next">&rsaquo;</a>
+	</div>
+	</div>
+<!--
+// --------------------------------------- Large thumbnails  ---------------------------------- //
+-->
+        <hr class="soften"/>
+		<div class="row-fluid">
+		  <ul class="thumbnails">
+			<li class="span4" ng-repeat="item in products | orderBy : random | limitTo : 3">
+			  <div class="thumbnail">
+				 
+				<a class="zoomTool" href="#!product_details/{{item['_id']}}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+				<a href="#!product_details/{{item['_id']}}"><img ng-src="{{item.image}}" alt=""></a>
+				<div class="caption cntr">
+					<p>{{item.name}}</p>
+                  	<p><strong>{{item.price | currency : "USD"}}</strong></p>
+					<h4><a class="shopBtn" href="#!product_details/{{item['_id']}}" title="add to cart"> Add to cart </a></h4>
+					<div class="actionList">
+						<a class="pull-left" href="#">Add to Wish List </a> 
+						<a class="pull-left" href="#"> Add to Compare </a>
+					</div> 
+					<br class="clr">
+				</div>
+			  </div>
+			</li>
+		  </ul>
+		</div>
+<!--
+// --------------------------------------- END of Large thumbnails  ---------------------------------- //
+-->        
+     </div>
+<!--
+######################################     Best sellers Products box   ###################################### 
+-->
+		<div class="well well-small">
+		  <h3><a class="btn btn-mini pull-right" href="#!products/All Jewelry & Watches/13" title="View more">VIew More<span class="icon-plus"></span></a> Best sellers </h3>
+		  <hr class="soften"/>
+		  <div class="row-fluid">
+		  <ul class="thumbnails">
+			<li class="span4" ng-repeat="item in products | orderBy : random | limitTo : 3">
+			  <div class="thumbnail">
+				<a class="zoomTool" href="#!product_details/{{item['_id']}}" title="add to cart"><span class="icon-search"></span> QUICK VIEW</a>
+				<a  href="#!product_details/{{item['_id']}}"><img ng-src="{{item.image}}" alt=""></a>
+				<div class="caption">
+				  <h5>{{item.name}}</h5>
+				  <h4>
+					  <a class="defaultBtn" href="#!product_details/{{item['_id']}}" title="Click to view"><span class="icon-zoom-in"></span></a>
+					  <a class="shopBtn" href="#" title="add to cart"><span class="icon-plus"></span></a>
+					  <span class="pull-right">{{item.price | currency : "USD"}}</span>
+				  </h4>
+				</div>
+			  </div>
+			</li>
+
+		  </ul>	
+	</div>
+	</div>
+<!--
+######################################  END of Best sellers Products box   ###################################### 
+-->    
+	</div>
+
+
+
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  END of   S P A N     B    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->

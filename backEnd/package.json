@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+     "start": "node app.js",
+  "test": "mocha",
+  "postinstall": "bower install && grunt build"
   },
   "dependencies": {
     "body-parser": "~1.18.2",

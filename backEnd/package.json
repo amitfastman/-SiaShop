@@ -5,7 +5,9 @@
   "scripts": {
      "start": "node app.js",
   "test": "mocha",
-  "postinstall": "bower install && grunt build"
+  "postinstall": "bower install && grunt build",
+     "heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+  "heroku-postbuild": "echo This runs afterwards."
   },
   "dependencies": {
     "body-parser": "~1.18.2",
